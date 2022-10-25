@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Brick : MonoBehaviour
 {
+    public float minRandomOffset = -0.05f;
+    public float maxRandomOffset = 0.05f;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        transform.position += transform.right * Random.Range(minRandomOffset, maxRandomOffset);
     }
 }
