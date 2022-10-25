@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5719681668289064843}
   - component: {fileID: 8713887012828692607}
   - component: {fileID: 2343587897014315498}
-  - component: {fileID: 3624317141622683132}
   - component: {fileID: -8660358728061442597}
   - component: {fileID: -581275111624173579}
   m_Layer: 0
@@ -100,35 +99,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3624317141622683132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411076262364938522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 411076262364938522}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!54 &-8660358728061442597
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -157,3 +127,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977b5dfa9be60eb408f7a61be05f5342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minRandomOffset: -0.05
+  maxRandomOffset: 0.05
