@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float turnAngle = 30;
+    public float turnAngle = 150;
 
     public float verticalPower = 20;
     // Start is called before the first frame update
