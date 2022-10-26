@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 public float Speed = 5f;
+
+public float TurnSpeed = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,16 +20,6 @@ public float Speed = 5f;
         float verticalInput = Input.GetAxis("Vertical");
 
         transform.Translate(0f, verticalInput * Speed * Time.deltaTime,  0f);
-        
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Rotate(0f,-100f * Time.deltaTime,0f);
-        }
-        
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(0f,100f * Time.deltaTime,0f);
-        }
+        transform.Rotate(0f, horizontalInput * TurnSpeed * Time.deltaTime, 0f );
     }
 }
