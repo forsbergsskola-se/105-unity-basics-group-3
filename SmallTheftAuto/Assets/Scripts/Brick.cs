@@ -37,5 +37,4 @@ public class Brick : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     {
         GetComponent<Rigidbody>().isKinematic = false;
     }
-
 }
