@@ -355,6 +355,8 @@
 "Assets/Scripts/Brick.cs"
 "Assets/Scripts/BrickCounter.cs"
 "Assets/Scripts/DeadZone.cs"
+"Assets/Scripts/PlayerCamControl.cs"
+"Assets/Scripts/PlayerMovement.cs"
 -langversion:9.0
 
 /deterministic
