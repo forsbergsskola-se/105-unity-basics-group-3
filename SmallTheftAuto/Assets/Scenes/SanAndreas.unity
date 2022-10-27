@@ -639,5 +639,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c68f17460aed03849848eaa421da6a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnAngle: 150
+  turnSpeed: 150
   verticalPower: 20
