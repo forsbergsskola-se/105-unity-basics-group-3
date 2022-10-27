@@ -10,22 +10,32 @@ public class Vehicle : MonoBehaviour
     public GameObject player;
 
     public CarMovement carMovement;
+
+    private bool EnterCarButtonPressed = false;
+    
     // Start is called before the first frame update
     void Start()
     {
         
     }
-    /*void Update() {
-        if(EnterCarButtonPressed("F"))
+    void Update()
+    {
+        var keyInfo = Console.ReadKey();
+        if (keyInfo.Key == ConsoleKey.F)
         {
-            if(PlayerIsInCar()) {
+            EnterCarButtonPressed = true;
+        }
+        if(EnterCarButtonPressed)
+        {
+            Console.WriteLine("Enter Car");
+            /*if(PlayerIsInCar()) {
                 LeaveCar();
             } else {
                 EnterCar();
-            }
+            }*/
         }
     }
-
+/*
     // Update is called once per frame
     void Update()
     {
