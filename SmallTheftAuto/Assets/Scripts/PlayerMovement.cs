@@ -16,9 +16,9 @@ public class PlayerMovement : MonoBehaviour
 void Update()
 {
     float translation = Input.GetAxis("Vertical") * verticalPower * Time.deltaTime;
-    transform.Translate(0, 0, -translation);
+    transform.Translate(0, translation, 0);
     
     float rotation = Input.GetAxis("Horizontal") * turnSpeed  * Time.deltaTime;
-    transform.Rotate(0, rotation, 0);
+    transform.Rotate(0, 0, -rotation);
 }
 }
