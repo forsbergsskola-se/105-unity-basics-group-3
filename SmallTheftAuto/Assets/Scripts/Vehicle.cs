@@ -12,14 +12,22 @@ public class Vehicle : MonoBehaviour
     public CarMovement carMovement;
 
     private bool EnterCarButtonPressed = false;
-    
+
+    bool PlayerIsInCar = false;
+
+    private bool activeInHierarchy = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Console.WriteLine("start");
     }
+    
     void Update()
     {
+        if (player.activeSelf)
+        {
+            PlayerIsInCar = false;
+        }
         var keyInfo = Console.ReadKey();
         if (keyInfo.Key == ConsoleKey.F)
         {
@@ -27,32 +35,29 @@ public class Vehicle : MonoBehaviour
         }
         if(EnterCarButtonPressed)
         {
-            Console.WriteLine("Enter Car");
-            /*if(PlayerIsInCar()) {
-                LeaveCar();
-            } else {
-                EnterCar();
-            }*/
+            switch (PlayerIsInCar)
+            {
+                case true: // Aleady in Car, so get out of car
+                    LeaveCar();
+                    break;
+                default: // Not in Car, get in
+                    EnterCar();
+                    break;
+            }
         }
     }
-/*
-    // Update is called once per frame
-    void Update()
+    void EnterCar()
     {
-        if (Console.ReadKey(Convert.ToBoolean("F"))) //check, whether the F key is being Pressed.
-        {
-            if (player is isActiveInHierarchy) //check, whether the player-GameObject's isActiveInHierarchy-Property is true
-            {
-                player SetActive = false; // Set the player-GameObject inactive by invoking its SetActive method with the value false
-                carMovement SetActive = true; //Set the carMovement-Field's enabled-Property to true to enable Car Controls.
-            }
-            else //If false, then the player is currently in the Vehicle and we should let him "Exit"
-            {
-                player SetActive = true; //Set the player-GameObject active by invoking its SetActive method with the value true to Show the Player.
-                carMovement SetActive = false; // Set the carMovement-Field's enabled-Property to false to disable Car Controls.
-            }
-        }
+        Console.WriteLine("Get in Car");
+        //activeInHierarchy = false;
+        player.SetActive(false);
+        //carMovement.setActive(true);
     }
-
-    private static readonly object isActiveInHierarchy = true;*/
+    void LeaveCar()
+    {
+        Console.WriteLine("Get out of Car");
+        //activeInHierarchy = true;
+        player.SetActive(true);
+        //carMovement = setInactive;
+    }
 }
