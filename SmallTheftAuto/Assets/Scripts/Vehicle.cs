@@ -7,7 +7,7 @@ using Object = UnityEngine.Object;
 
 public class Vehicle : MonoBehaviour
 {
-    public GameObject player;
+    /*public GameObject player;
 
     public CarMovement carMovement;
 
@@ -37,7 +37,7 @@ public class Vehicle : MonoBehaviour
         {
             switch (PlayerIsInCar)
             {
-                case true: // Aleady in Car, so get out of car
+                case true: // Already in Car, so get out of car
                     LeaveCar();
                     break;
                 default: // Not in Car, get in
@@ -59,5 +59,5 @@ public class Vehicle : MonoBehaviour
         //activeInHierarchy = true;
         player.SetActive(true);
         //carMovement = setInactive;
-    }
+    }*/
 }
