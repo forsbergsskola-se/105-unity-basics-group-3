@@ -17,9 +17,9 @@ public class CarMovement : MonoBehaviour
     void Update()
     {
         float translation = Input.GetAxis("Vertical") * verticalPower * Time.deltaTime;
-        transform.Translate(0, translation, 0);
+        transform.Translate(0,0 , translation);
     
         float rotation = Input.GetAxis("Horizontal") * turnSpeed  * Time.deltaTime;
-        transform.Rotate(0, 0, -rotation);
+        transform.Rotate(0, rotation, 0);
     }
 }
