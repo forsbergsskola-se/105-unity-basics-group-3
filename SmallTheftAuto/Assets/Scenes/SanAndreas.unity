@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1574677688}
-  car: {fileID: 0}
+  car: {fileID: 1684948087}
   carMovement: {fileID: 1684948088}
 --- !u!4 &1700868416 stripped
 Transform:
