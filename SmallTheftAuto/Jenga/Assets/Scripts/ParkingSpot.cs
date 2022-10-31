@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class ParkingSpot : MonoBehaviour
 {
-    public GameObject parkingspot;
     public bool hasCar;
-    public GameObject carPrefab;
+    public Vehicle carPrefab;
+    public GameObject player;
     void Start()
     {
         if (hasCar == true)
         {
-            Instantiate(carPrefab);
-            carPrefab.transform.position = parkingspot.transform.position;
-
+            Vehicle car = Instantiate(carPrefab);
+            car.transform.position = transform.position;
+            car.player = player;
         }
         
     }

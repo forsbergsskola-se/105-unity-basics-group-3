@@ -19,7 +19,7 @@ public float TurnSpeed = 100f;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        transform.Translate(0f, verticalInput * Speed * Time.deltaTime,  0f);
+        transform.Translate(0f, 0f,  verticalInput * Speed * Time.deltaTime);
         transform.Rotate(0f, horizontalInput * TurnSpeed * Time.deltaTime, 0f );
     }
 }
