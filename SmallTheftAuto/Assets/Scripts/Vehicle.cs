@@ -24,7 +24,7 @@ public class Vehicle : MonoBehaviour
 
     bool EnterCarButtonPressed()
     {
-        //if (float Vector3.Distance(player, car) < 2);
+        //if (Vector3.Distance(player.transform, car.transform) < 2)
         {
             if (Input.GetKey(KeyCode.F))
             {
