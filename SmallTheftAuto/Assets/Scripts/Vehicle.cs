@@ -7,16 +7,14 @@ using Object = UnityEngine.Object;
 
 public class Vehicle : MonoBehaviour
 {
-    /*public GameObject player;
+    public GameObject player;
 
     public CarMovement carMovement;
 
     private bool EnterCarButtonPressed = false;
 
     bool PlayerIsInCar = false;
-
-    private bool activeInHierarchy = false;
-    // Start is called before the first frame update
+    
     void Start()
     {
         Console.WriteLine("start");
@@ -49,15 +47,13 @@ public class Vehicle : MonoBehaviour
     void EnterCar()
     {
         Console.WriteLine("Get in Car");
-        //activeInHierarchy = false;
         player.SetActive(false);
-        //carMovement.setActive(true);
+        carMovement.enabled = true;
     }
     void LeaveCar()
     {
         Console.WriteLine("Get out of Car");
-        //activeInHierarchy = true;
         player.SetActive(true);
-        //carMovement = setInactive;
-    }*/
+        carMovement.enabled = false;
+    }
 }
