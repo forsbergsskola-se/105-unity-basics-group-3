@@ -9,6 +9,7 @@ public class Vehicle : MonoBehaviour
 {
     public GameObject player;
     public GameObject car;
+    public float distance;
 
     public CarMovement carMovement;
 
@@ -24,7 +25,8 @@ public class Vehicle : MonoBehaviour
 
     bool EnterCarButtonPressed()
     {
-        //if (Vector3.Distance(player.transform, car.transform) < 2)
+        distance = Vector3.Distance(player.transform.position, car.transform.position);
+        if ( distance < 2)
         {
             if (Input.GetKey(KeyCode.F))
             {
