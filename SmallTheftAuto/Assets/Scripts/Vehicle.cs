@@ -8,6 +8,7 @@ using Object = UnityEngine.Object;
 public class Vehicle : MonoBehaviour
 {
     public GameObject player;
+    public GameObject car;
 
     public CarMovement carMovement;
 
@@ -23,18 +24,20 @@ public class Vehicle : MonoBehaviour
 
     bool EnterCarButtonPressed()
     {
-        if (Input.GetKey(KeyCode.F))
+        //if (float Vector3.Distance(player, car) < 2);
         {
-                if (PlayerIsInCar())
-                    // Already in Car, so get out of car
-                    LeaveCar();
-                else
-                    // Not in Car, get in
-                    EnterCar();
+            if (Input.GetKey(KeyCode.F))
+            {
+            if (PlayerIsInCar())
+                // Already in Car, so get out of car
+                LeaveCar();
+            else
+                // Not in Car, get in
+                EnterCar();
+            }
         }
-
-            return true;
-    }
+        return true;
+}
 
     bool PlayerIsInCar()
     {
@@ -43,7 +46,7 @@ public class Vehicle : MonoBehaviour
         {
             return false;
         }
-        return false;
+        return true;
     }
     
     void EnterCar()
