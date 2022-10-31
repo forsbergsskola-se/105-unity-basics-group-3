@@ -11,39 +11,38 @@ public class Vehicle : MonoBehaviour
 
     public CarMovement carMovement;
 
-    private bool EnterCarButtonPressed = false;
-
-    bool PlayerIsInCar = false;
-    
     void Start()
     {
-        Console.WriteLine("start");
+        player.SetActive(true);
     }
     
     void Update()
     {
-        if (player.activeSelf)
+        EnterCarButtonPressed();
+    }
+
+    bool EnterCarButtonPressed()
+    {
+        var keyInfo = Input.GetKey(KeyCode.F);
         {
-            PlayerIsInCar = false;
-        }
-        var keyInfo = Console.ReadKey();
-        if (keyInfo.Key == ConsoleKey.F)
-        {
-            EnterCarButtonPressed = true;
-        }
-        if(EnterCarButtonPressed)
-        {
-            switch (PlayerIsInCar)
-            {
-                case true: // Already in Car, so get out of car
-                    LeaveCar();
-                    break;
-                default: // Not in Car, get in
-                    EnterCar();
-                    break;
-            }
+            if (PlayerIsInCar)
+                // Already in Car, so get out of car
+                LeaveCar();
+            else
+                // Not in Car, get in
+                EnterCar();
         }
     }
+
+    bool PlayerIsInCar()
+    {
+        // active in hierarchy
+        if (player.activeInHierarchy)
+        {
+            return true;
+        }
+    }
+    
     void EnterCar()
     {
         Console.WriteLine("Get in Car");
