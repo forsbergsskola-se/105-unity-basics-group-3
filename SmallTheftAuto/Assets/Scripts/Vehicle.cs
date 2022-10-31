@@ -9,11 +9,14 @@ public class Vehicle : MonoBehaviour
 {
     public GameObject player;
     public GameObject car;
-    public float distance;
-
     public CarMovement carMovement;
 
-    void Start()
+    private void Start()
+    {
+
+    }
+
+    void Awake()
     {
         //player.SetActive(true);
     }
@@ -25,8 +28,8 @@ public class Vehicle : MonoBehaviour
 
     bool EnterCarButtonPressed()
     {
-        distance = Vector3.Distance(player.transform.position, car.transform.position);
-        if ( distance < 2)
+        
+        if (Vector3.Distance(player.transform.position, car.transform.position) < 2)
         {
             if (Input.GetKey(KeyCode.F))
             {
