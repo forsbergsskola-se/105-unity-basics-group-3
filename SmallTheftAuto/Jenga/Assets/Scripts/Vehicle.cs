@@ -16,18 +16,18 @@ public class Vehicle : MonoBehaviour
 
      
 
-    public void LeaveCar()
+    public void EnterCar()
     {
-        Debug.Log("LeftCar");
+        Debug.Log("EnteredCar");
         player.SetActive(false);
         carMovement.enabled = true;
         
     }
     
 
-    public void EnterCar()
+    public void LeaveCar()
     {
-        Debug.Log("EnteredCar");
+        Debug.Log("LeftCar");
         carMovement.transform.position = player.transform.position;
         player.SetActive(true);
         carMovement.enabled = false;
@@ -41,11 +41,11 @@ public class Vehicle : MonoBehaviour
         {
             if(player.activeInHierarchy )
             {
-                LeaveCar();
+                EnterCar();
             }
             else
             {
-                EnterCar();
+                LeaveCar();
             }
         }
     }
