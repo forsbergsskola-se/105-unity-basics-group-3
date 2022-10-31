@@ -13,7 +13,7 @@ public class Vehicle : MonoBehaviour
 
     void Start()
     {
-        player.SetActive(true);
+        //player.SetActive(true);
     }
     
     void Update()
@@ -23,16 +23,17 @@ public class Vehicle : MonoBehaviour
 
     bool EnterCarButtonPressed()
     {
-        var keyInfo = Input.GetKey(KeyCode.F);
+        if (Input.GetKey(KeyCode.F))
         {
-            if (PlayerIsInCar())
-                // Already in Car, so get out of car
-                LeaveCar();
-            else
-                // Not in Car, get in
-                EnterCar();
+                if (PlayerIsInCar())
+                    // Already in Car, so get out of car
+                    LeaveCar();
+                else
+                    // Not in Car, get in
+                    EnterCar();
         }
-        return true;
+
+            return true;
     }
 
     bool PlayerIsInCar()
