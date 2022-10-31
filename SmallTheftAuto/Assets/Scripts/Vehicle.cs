@@ -25,13 +25,14 @@ public class Vehicle : MonoBehaviour
     {
         var keyInfo = Input.GetKey(KeyCode.F);
         {
-            if (PlayerIsInCar)
+            if (PlayerIsInCar())
                 // Already in Car, so get out of car
                 LeaveCar();
             else
                 // Not in Car, get in
                 EnterCar();
         }
+        return true;
     }
 
     bool PlayerIsInCar()
@@ -39,8 +40,9 @@ public class Vehicle : MonoBehaviour
         // active in hierarchy
         if (player.activeInHierarchy)
         {
-            return true;
+            return false;
         }
+        return false;
     }
     
     void EnterCar()
