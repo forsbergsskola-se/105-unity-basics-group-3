@@ -45,6 +45,7 @@ public class Vehicle : MonoBehaviour
         {
             Debug.Log("Get out of Car");
             player.SetActive(true);
+            player.transform.position = car.transform.position;
             carMovement.enabled = false;
         }
     }
