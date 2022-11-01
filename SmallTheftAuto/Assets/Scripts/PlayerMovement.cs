@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,10 +5,6 @@ public class PlayerMovement : MonoBehaviour
     public float turnSpeed = 150;
 
     public float verticalPower = 20;
-
-    void Start()
-    {
-    }
 
     void Update()
     {

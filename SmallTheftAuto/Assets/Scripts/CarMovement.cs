@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CarMovement : MonoBehaviour
@@ -9,11 +7,6 @@ public class CarMovement : MonoBehaviour
 
     public float verticalPower = 20;
 
-    void Start()
-    {
-        
-    }
-    
     void Update()
     {
         float translation = Input.GetAxis("Vertical") * verticalPower * Time.deltaTime;
