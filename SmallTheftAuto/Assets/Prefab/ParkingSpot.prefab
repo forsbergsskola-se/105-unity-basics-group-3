@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 6600723428558098430}
   - component: {fileID: 4101625025687773559}
   - component: {fileID: 5277425114870360776}
-  - component: {fileID: 8239982576284376867}
   m_Layer: 0
   m_Name: ParkingSpot
   m_TagString: Untagged
@@ -146,17 +145,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &8239982576284376867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759894596767334832}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7275cd76c3dd3e047a9f35cef5f8e983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasCar: 0
-  carPrefab: {fileID: 6028675648979146051, guid: 3aa9adf3dfd5b61448f95ea30f4cd099, type: 3}
