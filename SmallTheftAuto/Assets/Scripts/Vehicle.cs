@@ -15,7 +15,7 @@ public class Vehicle : MonoBehaviour
     void EnterCarButtonPressed()
     {
 
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (PlayerIsInCar()) // Already in Car, so get out of car
                     LeaveCar();
