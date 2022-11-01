@@ -14,9 +14,4 @@ public class PlayerMovement : MonoBehaviour
         float rotation = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
         transform.Rotate(0, rotation, 0);
     }
-
-    private void OnDisable()
-    {
-        Debug.Log("I got disabled.");
-    }
 }

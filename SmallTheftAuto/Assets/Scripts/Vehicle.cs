@@ -36,14 +36,12 @@ public class Vehicle : MonoBehaviour
 
         void EnterCar()
         {
-            Debug.Log("Get in Car");
             player.SetActive(false);
             carMovement.enabled = true;
         }
 
         void LeaveCar()
         {
-            Debug.Log("Get out of Car");
             player.SetActive(true);
             player.transform.position = car.transform.position;
             carMovement.enabled = false;
