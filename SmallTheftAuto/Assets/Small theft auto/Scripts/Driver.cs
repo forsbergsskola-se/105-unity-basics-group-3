@@ -29,7 +29,7 @@ public class Driver : MonoBehaviour
     
     
 
-    private bool EnterCarInput => Input.GetKeyDown(KeyCode.F);
+    private bool EnterCarInput => Input.GetButtonDown("Interact-Vehicle");
 
     Transform GetClosestCar()
     {
@@ -55,16 +55,8 @@ public class Driver : MonoBehaviour
         
     }
     
-    private bool IsWithinCarDistance
-    {
-        get
-        {
-            if (Vector3.Distance(transform.position, GetClosestCar().position) <= enterCarRange)
-                return true;
-            return false;
-        }
-    }
-    
+    private bool IsWithinCarDistance => Vector3.Distance(transform.position, GetClosestCar().position) <= enterCarRange;
+
     void EnterCar()
     {
         transform.position = GetClosestCar().transform.position;

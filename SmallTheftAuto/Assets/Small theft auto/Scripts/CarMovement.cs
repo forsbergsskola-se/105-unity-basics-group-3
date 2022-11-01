@@ -6,9 +6,9 @@ public class CarMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        _player = (PlayerMovement)FindObjectOfType(typeof(PlayerMovement));
+        _player = FindObjectOfType<PlayerMovement>();
         _carMovement = GetComponent<CarMovement>();
     }
 
@@ -39,7 +39,7 @@ public class CarMovement : MonoBehaviour
     
     private PlayerMovement _player;
     private CarMovement _carMovement;
-    private bool EnterCarInput => Input.GetKeyDown(KeyCode.F); //I know, ugly copy paste code
+    private bool EnterCarInput => Input.GetButtonDown("Interact-Vehicle"); //I know, ugly copy paste code
     
     
 
