@@ -6,8 +6,6 @@ using UnityEngine;
 public class Driver : MonoBehaviour
 {
     public float enterCarRange = 2;
-    
-    //public Transform[] cars;
     private CarMovement carMovement;
     
 

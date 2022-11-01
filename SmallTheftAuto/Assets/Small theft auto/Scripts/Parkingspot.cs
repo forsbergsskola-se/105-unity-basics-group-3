@@ -7,20 +7,43 @@ public class Parkingspot : MonoBehaviour
 {
     public bool hasCar;
     public GameObject carPrefab;
-    
-    // Start is called before the first frame update
+    public float respawnTime = 10f;
+    float spawnTimer;
+    public LayerMask carLayer;
+    private GameObject car;
+   
     void Start()
     {
         if (hasCar == true)
         {
-            Instantiate(carPrefab, transform.position, quaternion.identity);
-            
+            SpawnCar();
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        RespawnCar();
+    }
+
+    void RespawnCar()
+    {
+        Collider[] hitColliders = Physics.OverlapBox(transform.position, transform.localScale / 2, quaternion.identity, carLayer);
+        if (hitColliders.Length == 0)
+        {
+            spawnTimer += Time.deltaTime;
+            if (spawnTimer >= respawnTime)
+            {
+                SpawnCar();
+            }
+        }
+        else
+        {
+            spawnTimer = 0;
+        }
+    }
+
+    void SpawnCar()
+    {
+        car = Instantiate(carPrefab, transform.position, quaternion.identity);
     }
 }

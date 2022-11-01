@@ -57,7 +57,7 @@ public class MenuButtons : MonoBehaviour
 
     
 }
-enum MenuStates
+     enum MenuStates
      {
          Closed,
          Open

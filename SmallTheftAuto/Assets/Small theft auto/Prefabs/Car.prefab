@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6384689236655096878}
   - component: {fileID: 6384689236655096877}
   - component: {fileID: 6384689236655096876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 6384689237153661927}
   - component: {fileID: 6384689237153661926}
   - component: {fileID: 6384689237153661925}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 6384689237819859168}
   - component: {fileID: 6384689237819859167}
   - component: {fileID: 6384689237819859166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 6384689238014964102}
   - component: {fileID: 6384689238014964101}
   - component: {fileID: 6384689238014964100}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,8 @@ GameObject:
   - component: {fileID: 6384689238063047646}
   - component: {fileID: 6384689238063047645}
   - component: {fileID: 4337010613555002886}
-  m_Layer: 0
+  - component: {fileID: 1887479946085583369}
+  m_Layer: 6
   m_Name: Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,6 +453,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ae86d6c6207464bbb9fc47123bbb2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1887479946085583369
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6384689238063047643}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6384689238100232448
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +478,7 @@ GameObject:
   - component: {fileID: 6384689238100232452}
   - component: {fileID: 6384689238100232451}
   - component: {fileID: 6384689238100232450}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +575,7 @@ GameObject:
   - component: {fileID: 6384689238482716868}
   - component: {fileID: 6384689238482716867}
   - component: {fileID: 6384689238482716866}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
