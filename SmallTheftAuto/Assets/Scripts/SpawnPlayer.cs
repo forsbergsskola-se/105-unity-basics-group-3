@@ -8,6 +8,7 @@ public class SpawnPlayer : MonoBehaviour
 
     void Start()
     {
+    
         GameObject.Instantiate(player);
     }
 }
