@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: faee7f2bad489d048954ce3810420032
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - parkingspot: {instanceID: 0}
+  - carPrefab: {fileID: 1858471537658943582, guid: 53204d9f02bd5e34ebe61e61a97300e2, type: 3}
+  - player: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
