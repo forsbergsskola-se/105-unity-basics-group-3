@@ -6,6 +6,7 @@ using UnityEngine;
 public class Parkingspot : MonoBehaviour
 {
     public bool hasCar;
+    public Transform spawnPos;
     public GameObject carPrefab;
     public float respawnTime = 10f;
     float spawnTimer;
@@ -27,7 +28,8 @@ public class Parkingspot : MonoBehaviour
 
     void RespawnCar()
     {
-        Collider[] hitColliders = Physics.OverlapBox(transform.position, transform.localScale / 2, quaternion.identity, carLayer);
+        Vector3 overlapScale = new Vector3(0, 5, 0) + (transform.localScale / 2);
+        Collider[] hitColliders = Physics.OverlapBox(transform.position, overlapScale, quaternion.identity, carLayer);
         if (hitColliders.Length == 0)
         {
             spawnTimer += Time.deltaTime;
@@ -44,6 +46,6 @@ public class Parkingspot : MonoBehaviour
 
     void SpawnCar()
     {
-        car = Instantiate(carPrefab, transform.position, quaternion.identity);
+        car = Instantiate(carPrefab, spawnPos.position, quaternion.identity);
     }
 }
