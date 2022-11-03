@@ -43,7 +43,7 @@ public class Vehicle : MonoBehaviour
         void LeaveCar()
         {
             player.SetActive(true);
-            player.transform.position = car.transform.position;
+            player.transform.position = car.transform.position + new Vector3(2,0,0);
             carMovement.enabled = false;
         }
     }
