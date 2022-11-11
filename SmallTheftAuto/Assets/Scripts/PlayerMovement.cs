@@ -1,4 +1,7 @@
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,8 +13,8 @@ public class PlayerMovement : MonoBehaviour
     {
         float translation = Input.GetAxis("Vertical") * verticalPower * Time.deltaTime;
         transform.Translate(0,0 , translation);
-
-        float rotation = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
+    
+        float rotation = Input.GetAxis("Horizontal") * turnSpeed  * Time.deltaTime;
         transform.Rotate(0, rotation, 0);
     }
 }
