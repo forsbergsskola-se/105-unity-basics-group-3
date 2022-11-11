@@ -8,7 +8,7 @@ public class ParkingSpot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!hasCar)
+        if (hasCar)
         {
             Debug.Log("Create car");
             Instantiate(carPrefab, transform.position, transform.rotation);
