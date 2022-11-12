@@ -5840,7 +5840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c68f17460aed03849848eaa421da6a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  turnSpeed: 150
+  speed: 200
 --- !u!114 &1574677691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5882,6 +5883,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 723c408b-923b-499b-8c76-804dd3f156f6
     m_ActionName: PlayerActions/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e305c64d-0c47-490a-8e77-cb5125ab5831
+    m_ActionName: PlayerActions/Shoot[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerActions
