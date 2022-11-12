@@ -5,15 +5,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Vector2 inputVector = new Vector2(0, 0);
     //private PlayerControls _playerControls;
     
     //[SerializeField] private float turnSpeed = 150;
 
     //[SerializeField] private float verticalPower = 20;
 
-    public void OnMovement(InputValue value)
+    public void Moving(InputAction.CallbackContext context)
     {
-        Debug.Log("Works");
+        inputVector = context.ReadValue<Vector2>();
+        Debug.Log("X: " + inputVector.x.ToString() + " Z: " + inputVector.y.ToString());
     }
 
     /*private void Awake()
