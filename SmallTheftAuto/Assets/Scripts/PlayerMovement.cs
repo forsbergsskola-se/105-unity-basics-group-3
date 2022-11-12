@@ -6,16 +6,27 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private Vector2 inputVector = new Vector2(0, 0);
+
+    private Rigidbody rb;
     //private PlayerControls _playerControls;
     
     //[SerializeField] private float turnSpeed = 150;
 
-    //[SerializeField] private float verticalPower = 20;
+    [SerializeField] private float speed = 100;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     public void Moving(InputAction.CallbackContext context)
     {
         inputVector = context.ReadValue<Vector2>();
         Debug.Log("X: " + inputVector.x.ToString() + " Z: " + inputVector.y.ToString());
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = transform.forward * (inputVector.y * speed * Time.deltaTime);
     }
 
     /*private void Awake()
