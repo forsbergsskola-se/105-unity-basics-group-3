@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public PlayerControls controls;
+    
     private Vector2 inputVector = new Vector2(0, 0);
 
     private Rigidbody rb;
@@ -13,12 +15,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float turnSpeed = 150;
 
     [SerializeField] private float speed = 200;
-    
+
+    private void Awake()
+    {
+        controls.PlayerActions.Shoot.performed += ctx => Shoot();
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
+    void Shoot()
+    {
+        Debug.Log("We shot the sheriff");
+    }
     public void Moving(InputAction.CallbackContext context)
     {
         inputVector = context.ReadValue<Vector2>();
@@ -28,6 +39,16 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = transform.forward * (inputVector.y * speed * Time.deltaTime);
+    }
+
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
     }
 
     /*private void Awake()
