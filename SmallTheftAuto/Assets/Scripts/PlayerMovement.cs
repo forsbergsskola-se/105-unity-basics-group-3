@@ -5,13 +5,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private PlayerControls _playerControls;
+    //private PlayerControls _playerControls;
     
-    [SerializeField] private float turnSpeed = 150;
+    //[SerializeField] private float turnSpeed = 150;
 
-    [SerializeField] private float verticalPower = 20;
+    //[SerializeField] private float verticalPower = 20;
 
-    private void Awake()
+    public void OnMovement(InputValue value)
+    {
+        Debug.Log("Works");
+    }
+
+    /*private void Awake()
     {
         _playerControls = new PlayerControls();
     }
@@ -35,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         currentPosition.x = movement * verticalPower * Time.deltaTime;
         currentPosition.z = movement * verticalPower * Time.deltaTime;
         transform.position = currentPosition;
-    }
+    }*/
 
     /*void Update()
     {
