@@ -5,16 +5,42 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float turnSpeed = 150;
+    private PlayerControls _playerControls;
+    
+    [SerializeField] private float turnSpeed = 150;
 
-    public float verticalPower = 20;
+    [SerializeField] private float verticalPower = 20;
 
-    void Update()
+    private void Awake()
+    {
+        _playerControls = new PlayerControls();
+    }
+
+    private void OnEnable()
+    {
+        _playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _playerControls.Disable();
+    }
+
+    private void FixedUpdate()
+    {
+        float movement = _playerControls.PlayerActions.WASD.ReadValue<float>();
+        Vector3 currentPosition = transform.position;
+        currentPosition.x = movement * verticalPower * Time.deltaTime;
+        currentPosition.z = movement * verticalPower * Time.deltaTime;
+        transform.position = currentPosition;
+    }
+
+    /*void Update()
     {
         float translation = Input.GetAxis("Vertical") * verticalPower * Time.deltaTime;
         transform.Translate(0,0 , translation);
     
         float rotation = Input.GetAxis("Horizontal") * turnSpeed  * Time.deltaTime;
         transform.Rotate(0, rotation, 0);
-    }
+    }*/
 }
