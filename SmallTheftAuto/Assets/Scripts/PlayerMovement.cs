@@ -19,11 +19,13 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         _playerControls.Enable();
+        //_playerControls.PlayerActions.WASD.performed += WASD;
     }
 
     private void OnDisable()
     {
         _playerControls.Disable();
+        //_playerControls.PlayerActions.WASD.performed -= WASD;
     }
 
     private void FixedUpdate()
