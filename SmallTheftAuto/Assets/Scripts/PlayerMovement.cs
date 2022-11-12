@@ -9,10 +9,11 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody rb;
     //private PlayerControls _playerControls;
-    
-    //[SerializeField] private float turnSpeed = 150;
 
-    [SerializeField] private float speed = 100;
+    [SerializeField] private float turnSpeed = 150;
+
+    [SerializeField] private float speed = 200;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
