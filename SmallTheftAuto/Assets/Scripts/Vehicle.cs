@@ -5,10 +5,24 @@ public class Vehicle : MonoBehaviour
     public GameObject player;
     public GameObject car;
     public CarMovement carMovement;
+    public bool inRange = false;
 
     void Update()
     {
         EnterCarButtonPressed();
+        /*if (Vector3.Distance(car.transform.position, player.transform.position) < 2)
+        {
+            inRange = true;
+        }
+        bool PlayerIsInCar()
+        {
+            if (player.activeInHierarchy)
+            {
+                return false;
+            }
+
+            return true;
+        }*/
     }
 
     // ReSharper disable Unity.PerformanceAnalysis

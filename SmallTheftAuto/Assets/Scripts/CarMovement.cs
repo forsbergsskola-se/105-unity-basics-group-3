@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
-
     public float turnSpeed = 150;
 
     public float verticalPower = 20;
